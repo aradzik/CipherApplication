@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="layout :: head"></head>
+<meta charset="utf-8">
+<body>
+<style>
+    .centered {
+        margin-left: auto;
+        margin-right: auto;
+        height: 450px;
+        width: 500px;
+    }
+</style>
+<div th:include="layout :: navigationPanel"></div>
+<div class="centered">
+    <h1>Wynik</h1>
+
+    <h2 th:text="'Twój tekst: ' +${sentence.text}"></h2>
+    <h2 th:text="'Zaszyfrowane: ' + ${sentence.code}"></h2>
+    <h2 th:text="'Odszyfrowane: ' + ${sentence.encode}"></h2>
+</div>
+
+<div th:include="layout :: footer"></div>
+</body>
+</html>

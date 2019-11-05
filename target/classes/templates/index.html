@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="layout :: head"></head>
+<meta charset="utf-8">
+<body>
+<style>
+    .centered {
+        margin-left: auto;
+        margin-right: auto;
+        height: 450px;
+        width: 500px;
+    }
+</style>
+
+<div th:include="layout :: navigationPanel"></div>
+<div class="centered">
+<h1>Szyfrowanie</h1>
+
+
+<form action="#" th:action="@{/encrypt}"method="POST" th:object="${sentence}">
+        <table align="center">
+            <h2>Wprowadź tekst do szyfrowania: </h2><input type="text" name="text" placeholder="" required/>
+        </table>
+    <br>
+    <button type="submit">Szyfruj</button>
+</form>
+<br><br>
+
+<form method="POST" th:action="@{/upload}" enctype="multipart/form-data" >
+
+       <h2> Wybierz plik do szyfrowania: <input type="file" name="file" required/>
+        <input type="submit" value="Szyfruj" /> </h2>
+
+</form>
+</div>
+
+<div th:include="layout :: footer"></div>
+</body>
+</html>

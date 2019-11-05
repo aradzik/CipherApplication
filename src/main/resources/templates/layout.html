@@ -1,0 +1,50 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <link rel="shortcut icon" href="img.ico" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Aplikacja szyfrująca</title>
+    <style>
+        .footer {
+        text-align: center;
+        position: static;
+        bottom: 0px;
+        left: 1px;
+        height: 50px;
+        width: 100%;
+    }
+
+    .nav > li {
+        text-align: center;
+        display: inline;
+        background: limegreen;
+    }
+
+    a {
+        text-align: center;
+        text-decoration: none;
+    }
+
+    th, td {
+        text-align: center;
+        border: solid 1px black;
+        padding: 5px;
+    }
+
+    </style>
+</head>
+<body>
+<div th:fragment="navigationPanel">
+    <ul class="nav">
+        <li><h1><a th:href="@{/index}">Start</a></h1></li>
+    </ul>
+</div>
+<div th:fragment="footer">
+    <footer class="footer">
+        <hr/>
+        <p>Copyright &copy; Aleksandra Radzik, 2019</p></footer>
+</div>
+</body>
+</html>
